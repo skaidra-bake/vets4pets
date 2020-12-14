@@ -6,4 +6,12 @@ class Staff < ApplicationRecord
 
   has_many :appointments
   has_many :animals, through: :appointments
+
+  PROFESSION = {
+    vet: 'veterinarian',
+    assistant: 'veterinary assistant',
+    carer: 'carer',
+    groomer: 'groomer',
+    technician: 'veterinary technician'
+  }
 end
