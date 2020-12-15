@@ -11,6 +11,16 @@
     <%= f.label :age %><br />
     <%= f.number_field :age, autocomplete: "age" %>
   </div>
+  
+  <div class="field">
+    <%= f.label :profession %><br />
+    <%= f.select :profession, options_for_select(Staff::PROFESSION.each_value) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :vet, "Are you a veterinarian?" %><br />
+    <%= f.check_box :vet %>
+  </div>
 
   <div class="field">
     <%= f.label :email %><br />
@@ -28,6 +38,11 @@
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tos_agreement, "I accept the terms and conditions" %><br />
+    <%= f.check_box :tos_agreement %>
   </div>
 
   <div class="actions">
